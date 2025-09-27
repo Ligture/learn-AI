@@ -75,6 +75,7 @@ class Game:
             print("\n你一把拉过她的笔记本，几行代码迅速解决了问题。(最终幻想)")
             print("小白虎躯一震。你进入【小白线】！")
             self.current_target = self.characters["小白"]
+            save.current_data['character'] = '小白'
             #增加5点初遇好感度
             self.current_target.change_affinity(5)
             self.story_loop()
@@ -94,6 +95,7 @@ class Game:
             print("\n你淡淡一笑，娓娓道来，姐姐听得入神。")
             print("姐姐眼神一亮。你进入【姐姐线】！")
             self.current_target = self.characters["姐姐"]
+            save.current_data['character'] = '姐姐'
             #增加5点初遇好感度
             self.current_target.change_affinity(5)
             self.story_loop()
@@ -128,7 +130,7 @@ class Game:
                 #尝试触发主线
                 if not dialogue.start_dialogue(save.current_data['story_progress']):
                     #主线不满足，随机支线
-                    daily_dialogue_list = ['100,101']
+                    daily_dialogue_list = ['100','101','102']
                     rand_dialogue = random.choice(daily_dialogue_list)
                     while not dialogue.start_dialogue(rand_dialogue):
                         daily_dialogue_list.remove(rand_dialogue)

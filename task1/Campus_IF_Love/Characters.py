@@ -36,6 +36,8 @@ class Character:
     def check_ending(self):
         if self.affinity >= 100:
             print(f"恭喜！你和 {self.name} 的故事进入了结局线！")
+            save.current_data['ending'] = 'True'
+            save.quicksave()
             return True
         return False
 

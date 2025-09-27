@@ -1,29 +1,5 @@
 from Characters import Character
 import save
-'''DIALOGUES = {
-    "学姐": [
-        {"text": "你是新来的吧？画画过吗？", "optionA": "其实我更擅长写代码，但我愿意试试画画。", "optionB": "画画？那种小孩子的东西我可没兴趣。"},
-        {"text": "这幅画……构图还算不错，你是随便画的吗？", "optionA": "嗯，我是随手画的，没想到能得到你的认可。", "optionB": "不，我可是很认真的！因为你在看嘛。"},
-        {"text": "加入社团后，不能三天打鱼两天晒网。", "optionA": "放心吧，我会认真对待。", "optionB": "社团只是玩玩而已吧？不要太严肃了。"},
-        {"text": "我平时比较严格，你会不会觉得我很不好相处？", "optionA": "严格才好啊，我喜欢有目标的人。", "optionB": "嗯……确实有点难相处。"},
-        {"text": "今天的社团活动结束了，你要不要和我一起收拾？", "optionA": "当然可以，我来帮你。", "optionB": "算了吧，我还有事要做。"}
-    ],
-    "小白": [
-        {"text": "Python 里的 for 循环，我总是写不对……", "optionA": "来，我教你一个小技巧！", "optionB": "这种简单的东西，你都不会？"},
-        {"text": "你看我借了好多书，会不会显得很傻？", "optionA": "不会啊，这说明你很爱学习，很可爱。", "optionB": "嗯……的确有点太贪心了。"},
-        {"text": "写代码的时候，我总喜欢喝奶茶……你呢？", "optionA": "我也是！来，下次我请你一杯。", "optionB": "我只喝水，健康第一。"},
-        {"text": "你会不会觉得我太依赖你了？", "optionA": "依赖我也没关系，我喜欢这种感觉。", "optionB": "嗯……是有点吧。"},
-        {"text": "要不要一起留在图书馆自习？我想有人陪。", "optionA": "好啊，我正好也要复习。", "optionB": "算了，我还是回宿舍打游戏吧。"}
-    ],
-    "姐姐": [
-        {"text": "你也喜欢在咖啡店看书吗？", "optionA": "是啊，这里很安静，很适合思考。", "optionB": "其实我只是随便找个地方坐。"},
-        {"text": "研究生的生活，其实没有你想象的那么光鲜。", "optionA": "我能理解，压力一定很大吧。", "optionB": "那我还是不要考研了。"},
-        {"text": "你觉得，什么样的人最值得依靠？", "optionA": "稳重冷静的人。", "optionB": "长得好看的人。"},
-        {"text": "我常常一个人坐到很晚，你不会觉得孤单吗？", "optionA": "有时候孤单是种享受。", "optionB": "一个人太寂寞了，我受不了。"},
-        {"text": "如果有一天，我遇到困难，你会帮我吗？", "optionA": "当然会，你不用一个人扛着。", "optionB": "我大概帮不了你吧。"}
-    ]
-}
-'''
 #序号100及以后为非主线
 DIALOGUES = {
     '学姐': {
@@ -49,11 +25,12 @@ DIALOGUES = {
         },
         '2.1': {
             'condition': False,
-            'text': 'xD',
+            'text': '不会写',
             'A': {'text': '', 'next': 0, 'affinity': 0,'narration':''},
             'B': {'text': '', 'next': 0, 'affinity': 0,'narration':''},
         },
         '100': {
+            #加入社团才能触发
             'condition': lambda: save.current_data.get('join_club', False) is True,
             'text': '学姐:今天的社团活动结束了，你要不要和我一起收拾？',
             'A': {'text': '当然可以，我来帮你。', 'next': 0, 'affinity': 2,'narration':'你们一起收拾完教室，学姐对你印象更好了。'},
@@ -66,19 +43,97 @@ DIALOGUES = {
             'A': {'text': '好啊，我很喜欢艺术展览。', 'next': 0, 'affinity': 3,'narration':'你们在艺术展览中度过了愉快的时光，学姐对你更有好感了。'},
             'B': {'text': '不了，我对艺术不太感兴趣。', 'next': 0, 'affinity': -3,'narration':'学姐觉得你不够重视她的兴趣，有点失望。'},
         },
+        #剧情来自Pycharm智能补全
+        '102': {
+            'text': '学姐:我最近遇到一个问题，能不能请你帮我个忙？',
+            'A': {'text': '当然可以，学姐需要我做什么？', 'next': 0, 'affinity': 5,'narration':'你帮学姐完成了任务，她对你的好感度大幅提升。'},
+            'B': {'text': '抱歉，我最近也很忙，可能帮不上忙。', 'next': 0, 'affinity': -5,'narration':'学姐觉得你不够可靠，有点失望。'},
+        },
     },
+
     '小白': {
+            '1.1': {
+                'text': '小白:Python 里的 for 循环，我总是写不对……',
+                'A': {'text': '来，我教你一个小技巧！', 'next': '1.2', 'affinity': 3},
+                'B': {'text': '这种简单的东西，你都不会？', 'next': '1.3', 'affinity': -3},
+            },
+            '1.2': {
+                'text': '小白:谢谢你！你会不会觉得我很笨？',
+                'A': {'text': '不会啊，大家都是从不会到会的。', 'next': '1.4', 'affinity': 3},
+                'B': {'text': '有点，不过多练习就好了。', 'next': '1.3', 'affinity': -2},
+            },
+            '1.3': {
+                'text': '小白:呜……我会努力的，不给你添麻烦。',
+                'A': {'text': '加油，我相信你能学会。', 'next': '1.4', 'affinity': 2},
+                'B': {'text': '别太依赖我了。', 'next': 0, 'affinity': -3, 'narration': '小白有些失落，与你的距离拉远了。'},
+            },
+            '1.4': {
+                'text': '小白:你看我借了好多书，会不会显得很傻？',
+                'A': {'text': '不会啊，这说明你很爱学习，很可爱。', 'next': '2.1', 'affinity': 5, 'narration': '小白开心地笑了，好感度提升！'},
+                'B': {'text': '嗯……的确有点太贪心了。', 'next': 0, 'affinity': -2, 'narration': '小白有点不好意思，气氛有些尴尬。'},
+            },
+            '2.1': {
+                'condition': False,
+                'text': '',
+                'A': {'text': '', 'next': 0, 'affinity': 0, 'narration': ''},
+                'B': {'text': '', 'next': 0, 'affinity': 0, 'narration': ''},
+            },
+            '100': {
+                'condition': lambda: save.current_data.get('affinity', 0) >= 20,
+                'text': '小白:要不要一起留在图书馆自习？我想有人陪。',
+                'A': {'text': '好啊，我正好也要复习。', 'next': 0, 'affinity': 3, 'narration': '你们一起学习，关系更亲近了。'},
+                'B': {'text': '算了，我还是回宿舍打游戏吧。', 'next': 0, 'affinity': -2, 'narration': '小白有点失望，一个人留下了。'},
 
-
-
+            },
+            #结局线对话
+            '101': {
+                'condition': lambda: save.current_data.get('ending',False) == True,
+                'text': '小白:今天去电影院吗？',
+                'A': {'text': '拉起她的手，"走。"', 'next': 0, 'affinity': 5, 'narration': '小白感激地看着你，好感度大幅提升。'},
+                'B': {'text': '算了吧我今天有点事。', 'next': 0, 'affinity': -3, 'narration': '小白有些失落，觉得你不够支持她。'},
+            },
     },
-    '姐姐': {},
+    '姐姐': {
+        '1.1': {
+            'text': '姐姐:你也喜欢在咖啡店看书吗？',
+            'A': {'text': '是啊，这里很安静，很适合思考。', 'next': '1.2', 'affinity': 3},
+            'B': {'text': '其实我只是随便找个地方坐。', 'next': '1.3', 'affinity': -2},
+        },
+        '1.2': {
+            'text': '姐姐:研究生的生活，其实没有你想象的那么光鲜。',
+            'A': {'text': '我能理解，压力一定很大吧。', 'next': '1.4', 'affinity': 3},
+            'B': {'text': '那我还是不要考研了。', 'next': '1.3', 'affinity': -2},
+        },
+        '1.3': {
+            'text': '姐姐:每个人都有自己的选择，开心就好。',
+            'A': {'text': '谢谢姐姐的理解。', 'next': '1.4', 'affinity': 2},
+            'B': {'text': '其实我还是很迷茫。', 'next': 0, 'affinity': -2, 'narration': '姐姐轻轻叹了口气，似乎有些担心你。'},
+        },
+        '1.4': {
+            'text': '姐姐:你觉得，什么样的人最值得依靠？',
+            'A': {'text': '稳重冷静的人。', 'next': '2.1', 'affinity': 3, 'narration': '姐姐微笑点头，对你的看法很认可。'},
+            'B': {'text': '长得好看的人。', 'next': 0, 'affinity': -3, 'narration': '姐姐有些无语，觉得你不太靠谱。'},
+        },
+        '2.1': {
+            'condition': False,
+            'text': '',
+            'A': {'text': '', 'next': 0, 'affinity': 0, 'narration': ''},
+            'B': {'text': '', 'next': 0, 'affinity': 0, 'narration': ''},
+        },
+        '100': {
+            'condition': lambda: save.current_data.get('affinity', 0) >= 20,
+            'text': '姐姐:我常常一个人坐到很晚，你不会觉得孤单吗？',
+            'A': {'text': '有时候孤单是种享受。', 'next': 0, 'affinity': 3, 'narration': '姐姐觉得你很懂她，关系更近了一步。'},
+            'B': {'text': '一个人太寂寞了，我受不了。', 'next': 0, 'affinity': -2, 'narration': '姐姐有些失落，没再多说什么。'},
+        },
+        '101': {
+            'condition': lambda: save.current_data['choice'].get('1.4','A') == 'A' and save.current_data['affinity'] >= 30,
+            'text': '姐姐:如果有一天，我遇到困难，你会帮我吗？',
+            'A': {'text': '当然会，你不用一个人扛着。', 'next': 0, 'affinity': 5, 'narration': '姐姐感激地看着你，好感度大幅提升。'},
+            'B': {'text': '我大概帮不了你吧。', 'next': 0, 'affinity': -3, 'narration': '姐姐有些失望，觉得你不够可靠。'},
+        },
+    },
 }
-
-
-
-
-
 
 
 class Dialogue:
@@ -87,14 +142,16 @@ class Dialogue:
         self.node = node
 
     def start_node(self, node:str):
-
+        if DIALOGUES.get(self.character.name).get(node) is None:
+            return False
         current_node = DIALOGUES.get(self.character.name).get(node)
         #不满足触发条件跳过
-        if current_node.get('condition','True') is False:
-            return False
-        if int(node) < 100: #只保存主线
+        if float(node) < 100: #只保存主线
             save.current_data['story_progress'] = node
         save.quicksave()
+        if current_node.get('condition','True') is False:
+            return False
+        print(f"\n你正在和{self.character.name}对话...")
         print(current_node["text"])
         print(f'A选项: {current_node["A"]["text"]}')
         print(f'B选项: {current_node["B"]["text"]}')
@@ -118,8 +175,8 @@ class Dialogue:
             return False
 
     def start_dialogue(self,node='1.1'):
-        print(f"\n你正在和{self.character.name}对话...")
-        self.start_node(node)
+
+        return self.start_node(node)
 
 
 
