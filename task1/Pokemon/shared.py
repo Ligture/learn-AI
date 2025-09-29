@@ -6,3 +6,5 @@ attr_fire = 'fire'
 attr_water = 'water'
 attr_electric = 'electric'
 attr_normal = 'normal'
+player_current_pokemon = None
+ai_current_pokemon = None
