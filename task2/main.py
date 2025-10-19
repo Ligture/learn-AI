@@ -39,6 +39,7 @@ def fetch_page(index=None):
         noti_datas.append(noti_data)
     return noti_datas
 
+
 def get_download_count(wbnewsid,owner,type='wbnewsfile',randomid='nattach'):
     api_url = f'https://jwch.fzu.edu.cn/system/resource/code/news/click/clicktimes.jsp?wbnewsid={wbnewsid}&owner={owner}&type={type}&randomid={randomid}'
     response = session.get(api_url)
@@ -67,6 +68,7 @@ def get_attachment(noti_data:NotificationData):
             url = 'https://jwch.fzu.edu.cn/' + i.xpath('./a/@href')[0]
             script = i.xpath('./span/script/text()')[0]
             script = script.split(',')
+            #获取附件下载量api参数 owner和randomid其实好像是固定的
             download_wbnewsid = script[0].split('(')[1].strip('"')
             download_owner = script[1].strip('"')
             download_type = script[2].strip('"')
@@ -121,7 +123,7 @@ def main(amount):
         if i == 0:
             noti_datas = fetch_page()
         else:
-            noti_datas += fetch_page(last_index - i)
+            noti_datas += fetch_page(int(last_index) - i)
     for i in noti_datas:
         get_attachment(i)
 
