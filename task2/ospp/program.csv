@@ -1,0 +1,250 @@
+项目名,项目难度,技术领域,项目简述,项目产出要求
+TinyEditor 支持协同编辑,进阶,Vue.js,"<p><span style=""color:#494949""><span style=""font-size:16px""><span style=""background-color:#ffffff"">随着在线协作需求的日益增长，用户希望在 TinyEditor 富文本编辑器中实现多人实时协同编辑功能。本功能需要从0开始开发，旨在允许多个用户同时对同一文档进行编辑，并且能够实时看到彼此的修改内容，确保团队成员之间的高效协作。</span></span></span></p>","1. 完成 TinyEditor 富文本编辑器的协同编辑功能开发，确保多个用户能够同时对同一个文档进行编辑，且编辑操作能够实时同步到所有参与协作的客户端。
+2. 用户在编辑器中的操作（如文本输入、删除、格式调整、图片插入、表格编辑等）能够在极短的时间内（不超过 1 秒）反映到其他协同编辑用户的编辑器界面上，确保实时性。不同用户的编辑操作能够在编辑器中以不同的颜色、光标样式或其他可视化方式加以区分，方便用户清楚地了解每个操作是由谁执行的。
+3. 冲突解决机制 ：在多个用户同时对同一段内容进行编辑时，能够自动检测并合理解决编辑冲突，确保文档内容的一致性和正确性。
+4. 接口与集成 ：提供与后端服务的接口，实现编辑器内容的实时保存和同步，确保在网络中断或其他异常情况下，用户的编辑内容不会丢失，并且能够在重新连接后继续协同编辑。
+5. 提供一个或多个完整的示例项目，展示 TinyEditor 协同编辑功能在实际应用场景中的使用方法，包括如何初始化协同编辑、如何处理用户加入和退出协同编辑等情况。编写详细的协同编辑功能使用文档和开发教程，包括功能介绍、操作步骤、接口说明、常见问题解答等内容，帮助用户快速上手并有效使用协同编辑功能。
+6. 确保代码符合项目规范，有完整的TypeScript类型声明，UI美观体验良好。
+7. 补充相应的文档和自动化测试用例。
+8. 建议输出TinyEditor协同编辑的介绍文章和视频
+"
+EmbodiedAI-Ops,进阶,"PyTorch,AI","<p><span style=""color:#000000""><span style=""font-size:16px""><span style=""background-color:#fcfcfc"">开发面向端到端具身操作任务的效率优化框架，通过多模态感知融合、动态技能重组与实时决策加速等技术，突破传统方法在数据效率、响应延迟和跨场景适应性方面的瓶颈。针对使用场景如工业装配、物流分拣等中实现操作成功率提升、任务执行时间缩短的目标。</span></span></span></p>","1.在仿真环境如pushT，metaworld实现对应操作任务，成功率达到70%以上
+2. 完成收集真实场景任务数据，如抓取放置。并在真实机器臂部署训练好模型，实现80%以上成功率
+3.利用前沿技术如预训练，CoT，仿真与真机数据混合训练等方式，实现完成长程任务并达到成功率80%以上。 
+
+"
+基于MindSpore实现化学材料AI 大模型MoMa的开发及性能优化,进阶,AI,<p>基于MindSpore+NPU进行创新：</p><p>（1）基于用户模型代码生成MindSpore 计算图，根据模块化计算模型具备动态分支模块与静态结构模块的特点，实现动态+静态编译结合的计算图，并基于此计算图进行性能优化的策略寻优与计算加速，既满足动态分支部分模型对框架灵活性的需求，又能将静态结构模型的优化空间最大化。</p><p>（2）针对模块化大模型基于运行中间结果选择分支的计算特点，探索动态计算图的并行计算加速策略，基于MindSpore 算子粒度切分的并行切分机制，对模型进行不同并行切分策略下的代价计算，以模型通信、数据通信、计算效率为参考实现并行切分策略的递归搜索，实现最优的计算图切分，实现训练与推理加速。</p>,"1. 完成基于MindSpore+NPU的MoMa模型开发。
+2. 支持模块化计算、具备动态分支的模型在分布式系统中运行速度的优化与提升，在同等算力下，模型取得同等精度所需训练时间缩短30%以上。
+"
+openGauss 向量数据库 AI 数据 ETL 框架最佳实践输出,基础,"AI,Database",<p>完成 Apache Kafka、Firecrawl、VectorETL 对接 openGauss 最佳实践教程输出</p>,"1. 基于 openGauss 部署指导文档，完成openGauss Docker 部署
+2. 参考 Milvus weaviate 等文档，完成 Apache Kafka、Firecrawl、VectorETL 对接 openGauss 最佳实践教程输出
+3. 将文档提交至 openGauss 社区
+"
+为洛书语言编写交互式学习手册,基础,Programming Language,<p>本项目要求为处于Beta阶段的洛书 v2.x 版本制作一份交互式学习手册，并以在线站点的形式部署至社区服务器，内容包括：安装与入门、程序结构、数据类型与编码技巧等。</p><p>该手册要求具备交互式运行支持，基于WASM技术提供 Play Ground 环境，使得用户可以在浏览器环境下体验手册中的样例代码。</p>,"1. 根据社区工作进展，完成文档内容编写，要求使用 MarkDown 格式
+2. 接入交互式运行功能，实现基于浏览器的 PlayGround 环境
+3. 将项目打包部署至社区服务器
+"
+基于 Node.js 和 Docker 实现的通用游戏服务端程序控制面板,基础/Basic,"DevOps,Vue.js,Socket,WebSocket,Webpack,Web Application","<p style=""text-align:start;"" size=""1"" _root=""[object Object]"" __ownerID=""undefined"" __hash=""undefined"" __altered=""false""><strong>MCSManager 面板</strong>是一款<u>免费，开源，分布式，轻量级，快速部署</u>，支持 Minecraft 和大部分 Steam 游戏服务器的 Web 控制面板。</p><p></p><p>此软件在 <code>Minecraft</code> 和部分能局域网联机的游戏社区内中已有一定的流行程度，它可以帮助你集中管理多个物理服务器，实现在任何主机上创建游戏服务器，并且提供安全可靠的多用户权限系统，可以很轻松的帮助你管理多个服务器，一直在为 <code>Minecraft</code>，<code>Terraria</code> 和 <code>Steam</code> 游戏服务器的管理员，运维人员和个人开发者提供健康的软件支持。</p><p></p><p><strong>主要特性：</strong></p><p>1. 支持 Minecraft 和 Steam 游戏 服务器。<br/>2. 支持分布式架构，组织多台机器。<br/>3. 可拖拽，可高度自定义的网页 UI。<br/>4. 支持运行所有 Docker 镜像。<br/>5. 多用户管理，资源分配，商业出租。<br/>6. 安装简单，一键快速开服。</p><p></p><p><strong>主要技术栈：</strong></p><p>1. NodeJS 生态（90%）</p><p>后端：Koa，Socket.io，Docker API。</p><p>前端：Vue3，Vueuse，Antdv。</p><p></p><p>2. Golang 生态（10%）</p><p></p><p><strong>团队氛围：</strong></p><p>目前团队内的开发者均为用爱发电，大部分为大学生，少部分上班族，有菜鸡也有大佬，主要是中国大陆开发者为主，少数几个不怎么活跃的海外地区开发者。</p><p></p><p>他们来自五湖四海，包容性强，只要你愿意学习，懂一些全栈开发，熟悉子进程控制知识，操作系统基本功，熟悉IO流编程，Docker 生态即可。</p><p></p><p>拒绝有实力但不屑一顾，自恃清高，能用就行态度的学生。</p><p></p>","
+1.为 MCSManager 提升基于 Docker 的可靠性，即主程序崩溃并重启后，能够重新接管存活的 Docker 容器的能力
+2. 开发 MCSManager 分布式的文件上传能力，实现切片文件上传，断点续传能力
+3. 修复一些项目上的BUG，提升项目运行稳定性
+4. (可选项) 实现兼容 Docker for Windows。
+"
+openInula 2.0 Antd 核心组件库,进阶,"React,UI,Webpack,Web Application",<p>openInula2.0 是一个新兴的前端框架，但目前缺乏一套完整的 UI 组件库支持。本项目旨在基于 Ant Design（Antd）的设计规范，开发一套轻量级的核心组件库，为开发者提供高效、易用的基础组件。</p><p></p><p>相关背景：Antd 是 React 生态中广泛使用的 UI 组件库，但 openInula2.0 作为新框架，需要兼容其特性的组件库。</p><p>已有工作：Antd 的开源代码和设计规范可作为参考。</p><p>存在的不足：openInula2.0 尚未有官方支持的组件库，开发者需要手动适配 Antd 组件。</p><p></p><p>实现目标：提供一套稳定、高效的 openInula2.0 版 Antd 基础组件库，支持常见场景的开发需求，包括：</p><p>DatePicker (日期选择框)</p><p>Form (表单)</p><p>Tooltip (文字提示)</p><p>Tree (树形控件）</p>,"1.  输出要求的 openInula2.0组件及测试代码
+2.  完善的文档，包括架构设计、API说明、使用指南和开发文档
+"
+基于LiteFlow框架开发大模型插件以实现类Dify的后端智能体应用表达式编排能力,进阶,"AI,Spring Boot",<p>LiteFlow是国内知名的Java规则引擎，目前被应用在数千家企业核心业务侧，社区人数众多，活跃度高。</p><p></p><p>目前LiteFlow被广泛应用在逻辑编排场景，拥有灵活的DSL规则表示式以及支持度广泛的脚本语言，实用性和特性都非常适合业务复杂的应用侧。</p><p></p><p>随着AI大模型的兴起，社区很多开发者把LiteFlow当做一个“后端Dify”来构造自己的智能体逻辑流。并且已经有相当一部分的社区同学已经成功落地了。但是LiteFlow并没有从框架层面对大模型有任何支持，LiteFlow目前提供的组件是极其开放的，大模型实现的部分还需要开发者自己去实现的。</p><p></p><p>所以这次的课题的目标就是为LiteFlow打造一个AI大模型支持的插件，开发者不用自己再去对接大模型，能够直接引用AI插件已定义好的大模型的各种组件加上LiteFlow原有的强大的编排能力形成一个智能体逻辑流程。</p><p></p><p>这次课题需要涉及当下大模型中的大部分知识块，包括但不仅限于对接主流平台的API，RAG，FunctionCall，MCP等相关概念。</p><p></p>,"1. 为LiteFlow开发liteflow-ai插件模块
+ - 1.1：提供大模型的组件，这些组件需要对接主流平台以及本地Ollama
+ - 1.2：需要在编排层面对这些大模型组件进行输入输出定义的设计
+ - 1.3：需要从设计上支持多模态输入，流式输出，Function Call等的包装支持
+2. 为大模型插件提供完善的测试用例工程liteflow-ai-test模块，需要对每一个细分功能点，场景进行支持
+3. 为开发好的liteflow-ai插件创建演示工程liteflow-ai-example工程，综合利用liteflow-ai开发的演示工程。
+"
+为 Dubbo Admin 实现多种部署模式和 AI 智能管控运维能力,进阶,"Cloud Native,LLMOps,AI","<p class=""p1"">1. Dubbo Admin作为宏观的控制中心，需要对运行在k8s以及非k8s环境下的Dubbo微服务进行统一的服务管理，流量管控。</p><p>目前Dubbo微服务有三种形态：</p><p>a. universal模式，该模式下dubbo微服务使用传统注册中心（nacos，zookeeper）进行服务发现，运行环境为虚拟机或其他非k8s环境。b. half模式，该模式下dubbo微服务使用传统注册中心进行服务发现，使用k8s作为运行的基础设施。</p><p>c. k8s模式，该模式使用istio和k8s作为注册中心和运行基座。</p><p class=""p1"">目前Admin已经支持了前两种，需要对第三种模式进行完善。</p><p></p><p class=""p1"">2. 随着微服务集群规模的扩大，企业内异地多活，容灾备份的场景越来越常见。Admin需要对多注册中心，多k8s集群进行支持。</p><p></p><p class=""p1"">3. Dubbo Admin作为统一的控制面，可以掌握到数据面的运行时数据，服务发现数据，以及可观测数据。当数据面中某个微服务出现问题时，利用服务运行信息以及监控（metric），日志（log），链路追踪（trace）等数据，结合llm，agent等技术，在Admin控制台中提供一个智能机器人，给开发者提供可能的排查方向和问题根源。</p>","1. 完善 Dubbo Admin 多种部署模型能力的支持
+2. 提供结合 AI 进行问题诊断能力
+"
+DragonOS云厂商移植支持,进阶,"Cloud Native,Linux,x86",<p>DragonOS 是一个自主研发、基于 Rust 编写的现代化操作系统，目前已支持在腾讯云CVM上运行。然而，在实际运行中尚存在网络等关键功能不完善的问题，以及一些稳定性问题。例如，运行于腾讯云的 DragonOS  CVM实例，目前暂时无法稳定响应 HTTP 请求。<br/></p><p>本项目旨在进一步提升 DragonOS 在各大云平台上的可用性与稳定性，主要目标包括：<br/></p><ol><li>将DragonOS移植至2个及以上的云平台，包括腾讯云、阿里云、华为云。</li><li>完成sshd的移植，能够通过ssh连接运行DragonOS的云服务器实例</li><li>完成Nginx的适配与部署，让DragonOS的云服务器实例提供稳定的HTTP服务；</li><li>完善自动化初始化配置工具 DragonConfig（Rust 实现，类似 cloud-init），完成云服务器实例启动后的自动初始化；</li></ol><p></p>,"1. 将DragonOS移植至2个及以上的云平台，包括腾讯云、阿里云、华为云。能够正常进入用户态，并完成内核及启动流程的适配
+2. 移植sshd，能够通过ssh连接DragonOS
+3. 成功在DragonOS上部署 Nginx，提供静态网页服务：可通过公网访问，稳定运行72小时以上
+4. 实现DraconConfig自动初始化工具：主要包括网络配置模块、移植必要的网络管理工具等
+5. 技术文档与操作手册：提供完整的文档体系，支撑用户与开发者的使用与二次开发。
+"
+在skywalking-go中增加trace profiling功能,进阶/Advanced,"DevOps,DevSecOps","<p><span style=""color:#172b4d""><span style=""font-size:14px""><span style=""background-color:#ffffff"">目前skywalking-go已经实现对诸多插件的trace追踪, 在此基础上便可以结合pprof中的labels功能中将trace和goroutine中的profiling分析相互绑定并分析, 最终可以在UI中展示出火焰图</span></span></span></p><p>此功能为新功能，需要和导师沟通功能范围，和提交设计和实现方案。</p>","
+1. 完成Trace Profiling功能, 并且完成E2E自动化验证
+"
+基于MindSpore Quantum实现自适应偏置场热启动QAOA算法 ,基础,AI,<p>任务背景：</p><p>1. 热启动策略：利用GW算法生成初始解，通过旋转编码为量子态，替代传统均匀叠加态。</p><p>2. 自适应偏置场：混合哈密顿量引入纵向偏置场，随优化过程更新，引导量子态向更优解演化。</p><p>3. 统一框架与理论分析，涵盖WS-ab-QAOA、WS-QAOA等变体。</p><p>任务需求：</p><p>基于MindSpore Quantum框架复现论文arXiv:2503.20048v1，实现热启动自适应偏置场QAOA，能够高效求解最大割问题，相对于论文中的对比对象有性能提升。</p>,"1. 要求使用MindSpore Quantum 0.10复现论文中3个图（figure2.4.5）；
+2. 提交规范的技术报告，需包含：a.具体的算法流程，复现的技术细节，例如量子线路；b.分析方法的运行机理 c.该算法适用场景和局限；
+3. 相关评估指标符合要求，代码需要有适当的注释并通过clean code标准；
+4. 最终项目代码需要通过审核并合入MindSpore Quantum代码仓。
+"
+为 Arthas 实现 JFR 解析和前端UI库,基础,"AIOps,React,RESTful API","<p>JFR 是 JDK 里非常重要的性能分析工具，它生成的结果文件需要解析展示出来。期望可以使用 React 并基于 Ant Design 组件库实现解析展示。</p><p></p><ol><li>在Server端使用 JDK 的 JFR API解析 .jfr 文件，提供 RESTful API</li><li>在前端以火焰图方式展示分析结果</li><li>需要支持 CPU Time/Allocated Memory/File IO Time/File Read Size/Exception 等常见 Event 的分析展示</li></ol><p></p><p>参考链接</p><ol><li><a href=""https://github.com/alibaba/arthas/issues/3014"" target=""_blank"">https://github.com/alibaba/arthas/issues/3014</a> </li><li><u><a href=""https://ant.design/index-cn"" rel=""nofollow"">https://ant.design/index-cn</a></u></li><li><u><a href=""https://github.com/eclipse-jifa/jifa/tree/main/frontend"">https://github.com/eclipse-jifa/jifa/tree/main/frontend</a> </u></li></ol><p></p>","1. 在Server端使用 JDK 的 JFR API解析 .jfr 文件，提供 RESTful API
+2. 在前端以火焰图方式展示分析结果
+3. 需要支持 CPU Time/Allocated Memory/File IO Time/File Read Size/Exception 等常见 Event 的分析展示
+"
+Apache ShardingSphere: 增强 SQL Server SQL 解析引擎，适配更多 DDL、DML 语句,基础,MySQL,"<p>背景:</p><p><br/>Apache ShardingSphere 是一款分布式数据库生态系统。目前，ShardingSphere 对 SQL Server 的 SQL 解析支持仍存在局限性，部分复杂 DDL（数据定义语言）和 DML（数据操作语言）语法无法被准确解析，导致用户在分片、读写分离、数据加密等场景中无法充分利用 SQL Server 的功能。<br/>此任务的目标是提升 ShardingSphere SQL 解析引擎对 SQL Server 的 SQL 支持度，提升对 SQL Server 的生态兼容性，满足用户需求。<br/></p><p>任务:<br/>参考 SQL Server 语法文档：https://learn.microsoft.com/zh-cn/sql/t-sql/language-reference，适配常用的 DDL 和 DML 语句，并补充对应的测试用例。相关任务如下：<br/></p><ul><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/queries/select-transact-sql?view=sql-server-ver16"" data-lark-is-custom=""true"">SELECT</a></li><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/statements/insert-transact-sql?view=sql-server-ver16"" data-lark-is-custom=""true"">INSERT</a></li><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/queries/update-transact-sql?view=sql-server-ver16"" data-lark-is-custom=""true"">UPDATE</a></li><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/statements/delete-transact-sql?view=sql-server-ver16"" data-lark-is-custom=""true"">DELETE</a></li><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/statements/merge-transact-sql?view=sql-server-ver16"" data-lark-is-custom=""true"">MERGE</a></li><li><a href=""https://learn.microsoft.com/zh-cn/sql/t-sql/functions/functions?view=sql-server-ver16"" data-lark-is-custom=""true"">FUNCTIONS</a></li></ul><p></p>","1. Apache ShardingSphere 目前已经对 SQL Server 进行了初步适配，支持通过 JDBC 连接底层存储，实现数据加密、数据脱敏等增强功能。为了提升对 SQL Server 语句的支持度，需要增强 Apache ShardingSphere 内部的 SQL Server 解析引擎，适配更多的 DDL、DML 语句，并且增加  SQL Server 自动化测试程序，保证数据加密和数据脱敏功能可用。
+"
+ArceBoot引导程序设计,进阶,RISC-V,"<p size=""1"" _root=""[object Object]"" __ownerID=""undefined"" __hash=""undefined"" __altered=""false""><span style=""font-size:10.5ptpx"">ArceBoot是基于ArceOS组件生态设计的轻量级引导程序，旨在通过模块化方式实现内核启动能力。项目聚焦UEFI实现路径，与ArceOS组件深度集成，利用ArceOS的驱动、文件系统等组件，减少重复开发并构建一个安全、高效的引导程序，支持从存储介质加载内核并跳转执行，ArceBoot引导程序的实现也可以同时丰富ArceOS的组件生态。</span></p><p></p><p><span style=""font-size:10.5ptpx"">ArceBoot引导程序设计项目的主要目标是：基于ArceOS的驱动组件（axdriver）和文件系统组件（axfs），实现引导介质的探测与内核文件（/EFI/BOOT/*.EFI）的加载，解析PE/COFF格式的内核文件，将其加载到内存，并通过UEFI标准接口跳转执行，以达成启动内核的目的。</span></p><p></p><p><span style=""font-size:10.5ptpx"">若</span>ArceBoot引导程序实现时，其依赖的ArceOS组件<span style=""font-size:10.5ptpx"">仍不完善，为ArceOS提交的合并请求也计入本项目的贡献中。</span></p>","1. 完成ArceBoot的UEFI引导程序实现，支持在QEMU或者真实硬件上加载并启动内核。
+2. 提供完整的构建与使用文档，包括示例配置和跨平台测试指南。
+"
+TinyVue组件增加全局配置动效方案,基础,"UI,Vue.js",<p>在开发应用时，为组件添加全局配置的动效方案是一种提升用户体验的好方法。这种方案允许开发者通过统一的方式控制所有组件的动画效果，从而保持应用的一致性和美观性，可参考Uiverse。</p>,"1. 定义全局动效配置，你需要定义一个全局的动效配置对象，这个对象可以包含各种动效相关的属性，比如动画类型、持续时间、延迟等。
+2. 创建动效函数库，创建一些通用的动效函数（js函数或者less通用类），这些函数可以根据全局配置来执行特定类型的动画。例如，你可以为淡入淡出、滑动和缩放等常见动画创建函数。
+3. 组件集成，每个组件都可以根据需要调用上述动效函数，并传入全局配置或局部配置。
+4. 动态调整配置，可以希望提供一种方式来动态地改变全局动效配置，以便于在不同的场景下使用不同的动画效果。
+5. 确保代码符合项目规范，有完整的TypeScript类型声明，UI美观体验良好。
+6. 补充相应的文档和自动化测试用例。
+7. 建议输出TinyVue组件增加全局配置动效方案的介绍文章和视频
+"
+使用仓颉语言编写的洛书运行环境,基础,Programming Language,<p>该项目要求使用仓颉编程语言进行实现一个嵌入式的洛书运行环境，可以在仓颉工程中插入洛书编写的脚本代码，提高工程的灵活性与拓展性。本项目要求实现以下功能：</p><ol><li>使用仓颉语言实现洛书的虚拟机、ADT与GC，支持运行编译后的字节码</li><li>实现洛书编译器（C 库）相关的调用接口，支持编译洛书脚本代码</li><li>设计实现 FFI 机制，可以与仓颉语言进行交互</li></ol>,"1.完成项目的基本功能要求，实现在仓颉工程中使用洛书脚本，实现动态执行。
+
+ - 
+2.在此基础上，基于FFI机制，实现基本脚本功能模块，如（IO、字符串、数学等）
+3.（可选）遵循仓颉社区规范，将本项目贡献至 Cangjie-SIG
+"
+Cloudpods 大模型一键部署,进阶,"LLM,Docker,Kubernetes","<p>基于 Cloudpods 容器主机和 GPU 透传功能开发一键部署大模型工具。制作主流大语言模型( deepseek, qwen, llama 等）容器运行镜像， 命令行工具调用 Cloudpods API 运行大模型容器主机与 Dify LLM开发应用平台容器主机，通过 Dify 容器访问大语言模型容器服务。容器内大模型服务运行可使用 Ollama 开源 LLM 服务部署框架。</p>","1.  能通过 Cloudpods 容器主机一键部署主流大语言模型服务( deepseek, qwen, llama 等）。
+2. 能通过 Cloudpods 容器主机一键部署 Dify LLM开发应用平台，能通过 Dify 访问部署的大语言模型服务。
+3. 代码以 PR 形式提交到 https://github.com/yunionio/cloudpods 仓库
+4. 产出项目开发使用文档
+"
+为IvorySQL开发基于uuid-ossp的sys_guid函数,基础,PostgreSQL,"<p class=""MsoNormal""><span style=""background-color:#ffffff"">(1)相关背景：</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">IvorySQL是一个开源的基于PG的数据库，支持多种Oracle兼容特性。目前IvorySQL需要一个强大并确保数据库级别唯一的sys_guid函数。</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">(2)已有的工作</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">PG内核提供一个类似sys_guid()的函数，即基于伪随机数的gen_random_uuid ()。</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">(3)存在的不足</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">缺少sys_guid函数。</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">(4)希望改进的点</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">基于uuid-ossp/e2fs开发这样一个函数。</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">(5)最终项目实现的目标</span></p><p class=""MsoNormal""><span style=""background-color:#ffffff"">代码以PR的形式提交到Github。</span></p>","1. 通过修改插件 uuid-ossp 的代码 contrib/uuid-ossp/uuid-ossp.c 实现sys_guid()函数。需要判断如下逻辑：如果系统有uuid-ossp，就使用uuid_make()，否则看有没有uuid-e2fs，如果有的话，就调用 uuid_generate_random(), 否则就调用 arc4random() 。同时修改代码使得IvorySQL能够自动载入uuid-ossp插件。
+"
+基于OrangePi AIpro和鸿蒙系统的智能网联小车开发,进阶,AI,<p>随着无线通信、鸿蒙系统、人工智能技术的快速发展，利用Orange Pi AIpro开发板及支持鸿蒙系统的移动终端开发智能网联小车成为了科研用户快速利用国产化软硬件技术掌握车联网开发的一种有效手段。</p>,"1. 利用Orange Pi AIpro开发板和高清摄像头搭建智能网联小车，小车利用OrangePi AIpro开发板作为主控板控制智能网联小车运动，小车利用OrangePi AIpro开发板上部署的AI算法通过摄像头辅助远程控制者进行目标检测、车道线检测、车道偏移计算等辅助控制功能。
+2. 基于具有wifi通信功能的鸿蒙终端开发应用程序，实现控制者通过wifi远程控制智能网联小车运动，智能网联小车采集的视频数据能实时通过wifi传输到鸿蒙终端帮助远程控制者实时操控。
+"
+实现 nydusify copy 的不落盘能力,进阶,"AI,Kubernetes,FUSE",<p>镜像是容器基础设施中的一个重要部分，目前 OCI 标准镜像的缺陷之一是容器需要等待整个镜像数据下载完成后才能启动，这导致了容器启动时消耗了过多的端到端时间。开源容器镜像加速项目 Nydus 能够使得容器做到秒级冷启动，在镜像构建，分发与运行时，以及性能与安全性上有诸多探索，目前 Nydus 服务了每日百万级的容器创建，也在 AI 模型镜像分发上有着诸多落地场景。</p><p></p><p>本题目是实现 nydusify copy 的不落盘能力，nydus 在构建及运行时工具链上都支持了 RISC-V64 架构。</p>,"1. nydus 提供的镜像 copy 工具目前存在性能问题，数据拷贝过程中大量数据会落盘，我们需要优化掉该行为，且进一步优化并发拷贝性能，并编写单元测试，集成测试，以及用户文档。
+"
+为 Rainbond 实现 Kubeblocks 集成,进阶,"Docker,Kubernetes","<p><code>Rainbond</code><span style=""color:#1c1e21""><span style=""font-size:16px"">是一个云原生应用管理平台，使用简单，不需要懂容器、Kubernetes和底层复杂技术，支持管理多个Kubernetes集群，和管理企业应用全生命周期。主要功能包括应用开发环境、应用市场、微服务架构、应用交付、应用运维、应用级多云管理等。</span></span></p><p></p><p><span style=""color:#1c1e21""><span style=""font-size:16px"">KubeBlocks 是一个开源的 Kubernetes 数据库 operator，能够帮助用户在 Kubernetes 上运行和管理多种类型的数据库。</span></span></p><p></p><p><span style=""color:#1c1e21""><span style=""font-size:16px"">为 Rainbond 集成 KubeBlocks 实现数据库的创建、管理、备份等。</span></span></p><p></p><p><span style=""color:#1c1e21""><span style=""font-size:16px"">（<span style=""background-color:#ffffff"">可以提供 Cursor 会员账号</span>）</span></span></p>","1. 产出设计文档
+ - 1.1：包括产品设计、技术设计
+2. 为 Rainbond 实现 KubeBlocks 功能
+ - 2.1：实现 Rainbond 插件化安装 KubeBlocks 相关服务
+ - 2.2：使用 Golang 实现 KubeBlocks 相关的 CRD 资源创建，包括备份
+ - 2.3：实现 UI 界面化的创建流程
+"
+铜锁密码库支持密码设备接口（SDF）和智能密码钥匙接口（SKF）功能,进阶,"RSA,PKI,SSL/TLS,AES","<p><span style=""color:#1f2328""><span style=""font-size:16px"">铜锁/Tongsuo是一个提供现代密码学算法和安全通信协议的开源基础密码库，为存储、网络、密钥管理、隐私计算等诸多业务场景提供底层的密码学基础能力，实现数据在传输、使用、存储等过程中的私密性、完整性和可认证性，为数据生命周期中的隐私和安全提供保护能力。</span></span><br/><span style=""color:#1f2328""><span style=""font-size:16px"">密码设备应用接口规范，对应标准为GM/T 0018-2023，定义了密码卡设备的调用接口。</span></span><br/><span style=""color:#1f2328""><span style=""font-size:16px"">智能密码钥匙接口规范，对应标准为GM/T 0016-2023定义了智能密码钥匙设备的调用接口。</span></span></p><p></p><p><span style=""color:#1f2328""><span style=""font-size:16px"">目前，Tongsuo开源项目只支持部分的SDF接口，需要参考SDF标准，支持完整的SDF接口。</span></span></p><p><span style=""color:#1f2328""><span style=""font-size:16px"">Tongsuo开源项目还不支持SKF接口，需要参考SKF标准，支持完整的SKF接口。</span></span></p><p></p><p><span style=""color:#1f2328""><span style=""font-size:16px"">补齐Tongsuo项目的SDF和SKF接口能力，为了帮助密码应用程序和用户更好的管理和控制密码卡和密码智能钥匙设备。</span></span></p><p></p><p><span style=""color:#1f2328""><span style=""font-size:16px"">企业会帮忙协调密码硬件设备。</span></span></p>","1. 完善Tongsuo中的SDF功能，至少适配一种密码卡或密码机
+ - 1.1：开发完整的SDF功能接口
+ - 1.2：至少适配一种密码卡设备
+ - 1.3：提供完善的测试用例和文档
+2. 开发SKF接口，至少适配一种智能密码钥匙
+ - 2.1：开发完整的SKF功能接口
+ - 2.2：至少适配一种智能密码钥匙设备
+ - 2.3：提供完善的测试用例和文档
+"
+SeaTunnel on Flink cdc connector 支持schema evolution,进阶/Advanced,Flink,"<p><span style=""color:#000000""><span style=""font-size:16px""><span style=""background-color:#ffffff"">目前SeaTunnel已经定义好了schema evolution相关的api接口，并且已经在zeta引擎上实现，该课题目标是在Flink引擎上实现该功能。</span></span></span></p>","
+1. 功能实现落地方案
+2. 实现Flink引擎schema evolution功能
+3. 编写完善的单元测试 + 集成测试
+"
+使用 Nacos 实现 FIT 集群的注册中心,基础,"Spring Boot,Programming Language",<p>FIT 集群跨进程服务间调用采用的是传统通用的服务注册与发现的机制，在开源前已经存在一版内部C++的注册中心实现，同时，为了方便调试，又提供了一版Java内存版的简单实现。</p><p></p><p>不管是哪一种实现，都是使用的 FIT 标准的插件来实现的，且注册中心的若干个插件提供的能力属于整个 FIT 系统最关键最基础的能力，已经拥有标准的接口定义（SPI），也就是说，不管是哪一种插件的实现，对于核心框架来说，代码都是不感知的。</p><p></p><p>当前开源之后，需要接入业界最流行的 Nacos 注册中心体系，相当于基于 Nacos，实现一个新的注册中心插件，要求实现所有注册中心的 SPI，让 Nacos 的注册中心插件可以成为 FIT 集群跨进程通信的稳定生产插件。</p>,"1. 一个由 Java 语言实现的 FIT 插件
+2. 使用该插件，FIT 集群（当前需要在 FIT for Java、python 两种语言的 FIT 运行时上）可以正常通信
+"
+MindSpore 框架下纯视觉 3D 检测模型（LSS 类）迁移与优化,进阶,AI,<p>Lift-Splat-Shoot 类纯视觉 3D 目标检测通过单目图像预测物体三维坐标，在自动驾驶、机器人等领域至关重要。当前主流模型多基于 PyTorch，需迁移至 MindSpore 框架以提升生态兼容性。</p>,"1. 完成模型结构复现、算子适配（如自定义 3D 坐标变换算子）
+2. 针对 NPU 硬件特性优化模型推理速度
+3. 开发一个相应的应用案例
+"
+基于MindSpore的YOLOv12实现智能交通分析,进阶,AI,<p>交通管理和道路安全对于现代智慧城市至关重要。检测交通违规行为、确保道路安全和改善城市交通需要创新的解决方案。这就是“智能交通监控：使用 YOLOv12N 进行实时闭路电视分析”项目的用武之地。本项目需要基于MindSpore+Ascend迁移YOLO12模型开发应用。</p>,"1.基于MindSpore框架和套件，迁移Yolo12模型，精度性能达到论文水平。
+2. 基于Yolo12模型，完成一个交通安全的案例应用:检测紧急车道违规并识别阻碍紧急车辆的车辆;分析基于车道的交通流速和拥堵情况，以确定交通状况;对车辆进行计数并对类型进行分类，以提供有关不同车辆类型的数据。
+3.  完成以下功能模块的开发:
+ - 3.1：LaneDetector类：①加载多边形数据：从 JSON 文件中读取泳道区域并缩放它们以匹配视频分辨率。 ②确定泳道位置：使用其边界框检查检测到的车辆是否在车道内。③跟踪车辆数量和速度：计算车辆数量并计算每条车道的平均速度。
+ - 3.2：LaneVehicleProcessor 类：①集成 YOLO 和 ByteTrack：YOLO 检测车辆，而 ByteTrack 跨帧跟踪它们。②分析检测区域：将检测到的车辆与预定义的车道区域进行比较。显示流量数据：使用 OpenCV 和 Supervision 库在视频上叠加实时数据。
+ - 3.3：流量管理：①入口和出口区域：跟踪车辆进出的车道。②速度估计：为车辆分配随机但真实的速度值。③紧急车道警告：检测应急车道上的车辆并发出警告。
+"
+SimpleRenderer ⾼性能渲染优化与结构优化,进阶,"x86,GCC,Perf","<p class=""p1""><strong>SimpleRenderer 是⼀个⽤ C/C++ 编写的软件渲染器，⽬前已实现基本的渲染管线，但在处理复杂场景时存在性</strong></p><p class=""p1""><strong>能瓶颈。本</strong></p><p class=""p1""><strong>项</strong></p><p class=""p1""><strong>⽬旨在不改变渲染器的基本架构的前提下，通过优化光栅化算法、改进内存访问模式、减少线程</strong></p><p class=""p1""><strong>同步开销等⽅式，显著提升渲染性能。</strong></p><p class=""p1""><strong>项</strong></p><p class=""p1""><strong>⽬将保持软件渲染器的教育价值，同时提供更加流畅的⽤户体验，使</strong></p><p class=""p1""><strong>学⽣能够学</strong></p><p class=""p1""><strong>习实⽤的图形学性能优化技术。</strong></p>","1. 光栅化算法优化
+a. 实现基于块/图块的光栅化算法（Tile-based Rasterization），代替现有的像素级处理⽅式
+b. 增加视锥体裁剪和背⾯剔除测试，提前过滤不可⻅三⻆形
+2. 内存管理优化
+a. 预分配⽚段缓冲区，避免渲染过程中的动态内存分配
+b. 改进数据布局，提⾼缓存利⽤率
+c. 实现共享内存机制，减少线程间的重复内存访问
+3. 深度测试优化
+a. 实现早期深度测试，在光栅化阶段直接剔除被遮挡的⽚段
+b. 减少⽚段⽣成和着⾊器调⽤次数
+c. 优化深度缓冲区访问模式
+4. 多线程架构改进
+a. 减少线程间的数据合并次数和同步开销
+"
+国产数据库读写组件开发,进阶,"Database,Hadoop,HDFS","<p><strong><span style=""font-size:18px"">项目背景：</span></strong></p><p><span style=""font-size:11ptpx""><span style=""color:#333333""><span style=""letter-spacing:0ptpx"">openGauss 和 KingbaseES（金仓）作为两款主流的国产数据库管理系统，凭借其高性能、高可用性和安全性，在政府、金融、能源等多个关键行业得到了广泛应用。为了提升πFlow平台的数据源兼容性，并推动数据处理流程的国产化转型，有必要开发针对openGauss和 KingbaseES（金仓）数据库的读写组件，实现高效的双向数据交互。</span></span></span></p><p></p><p><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:18px""><strong>项目内容</strong>：</span></span></span><br/><strong><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">一、数据库技术调研</span></span></span></strong><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">研究openGauss和和 KingbaseES（金仓）数据库的技术特点及接口规范，包括其SQL语法、事务管理机制以及批量操作性能优化策略。</span></span></span><br/><strong><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">二、四个核心组件开发</span></span></span></strong><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">openGauss数据库读取组件：负责从openGauss数据库中读取数据，并将数据加载到Spark DataFrame中，为后续的大数据处理提供基础支持。</span></span></span><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">openGauss数据库存储组件：负责将上游组件处理后的DataFrame结果存储回openGauss数据库，支持多种存储模式（如插入、更新、批量写入等），以满足不同场景的需求。</span></span></span><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">KingbaseES数据库读取组件：负责从KingbaseES数据库中读取数据，并将其加载到Spark DataFrame中，为后续的大数据处理提供基础支持。</span></span></span><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">KingbaseES数据库存储组件：负责将上游组件处理后的DataFrame结果存储回KingbaseES数据库，支持多种存储模式（如插入、更新、批量写入等），以满足不同场景的需求。</span></span></span><br/><strong><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">三、文档编写与发布</span></span></span></strong><br/> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">●</span></span></span> <span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">编写详细的文档，包括使用指南、开发文档和测试案例库，确保用户能够快速上手并正确使用该组件。</span></span></span></p><p></p><p><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:18px""><strong>开发语言</strong>：</span></span></span><br/><span style=""color:#333333""><span style=""letter-spacing:0ptpx""><span style=""font-size:11ptpx"">本项目要求采用Scala语言编写。Scala作为一种多范式编程语言，结合了面向对象和函数式编程的特点，具有简洁、优雅的语法，非常适合Spark生态圈的开发。它能够帮助我们快速构建高效、可扩展的组件，同时无缝集成到πFlow平台中。</span></span></span></p>","1. 四个核心组件开发：1）openGauss数据库读取组件；2）openGauss数据库存储组件；3）KingbaseES数据库读取组件；4）KingbaseES数据库存储组件。
+
+2. 文档编写：编写详细的文档，包括使用指南、开发文档和测试案例库，确保用户能够快速上手并正确使用该组件。
+
+"
+Sentinel AI 应用场景 Token 限流调研和实现,进阶,"AI,Web Application","<p><span style=""color:#000000"">Sentinel 作为面向分布式应用场景、多语言异构化服务架构的流量治理组件，以丰富的流量防护能力满足了各种应用场景的限流需求。当下 AI 应用成为广大开发者关注的领域，但是想要将 AI 应用真正用于生产，高可用的能力是必不可少的，由此也出现了很多 AI 应用场景下新的流量防护需求，例如 Token 限流，Token 这个 AI 场景下的常用单位，在作为限流的统计维度时存在着限流时机与统计时机不一致，强需求集群限流等特点。现有的限流能力难以很好地满足需求，因此需要在 Sentinel 中实现 Token 限流的能力，来限制 AI 应用的 Token 消耗，保障 AI 应用的整体稳定性。</span></p>","1. Go 语言 AI 应用框架（eino、langchaingo等）流量防护能力以及需求调研报告
+2. 基于 sentinel-golang，构建 Token 限流的能力
+ - 2.1：在 Token 超出阈值时进行限流，支持不同的统计周期以及统计维度
+ - 2.2：Token 限流支持集群模式
+ - 2.3：至少支持 1-2 个 Go 语言 AI 应用框架（例如eino、langchaingo等）
+3. 编写 Token 限流的核心设计文档、用户使用文档
+4. 进阶：支持限流后的动态 fallback 能力
+"
+MateChat模板VSCode插件兼容支持,基础,"UI,Vue.js",<p>根据用户使用习惯的不同，用户可能希望通过在VSCode中使用matechat来进行与模型的对话，目前matechat仅支持了pc端。本项目要求提供一套基于pc端一站式解决方案模板自动生成VSCode插件模板的方案，在pc端一站式解决方案的模板迭代后，通过脚本或插件的方式，自动更新VSCode插件的模板，不再需要人工维护多份模板。</p>,"1、编写一个脚本或插件，用于将pc端的一站式解决方案模板自动生成VSCode插件模板
+2、脚本或插件，尽量使用简单
+"
+构建AI+硬件陪伴玩具,基础,"Chip Design/Verification,Programming Language",<p>小X宝是面向多病种患者和家属提供辅助信息的平台，从2024年开始已经在多个平台完成了线上版本应用搭建，逐渐我们发现患者和家属还需要更多陪伴和关爱，不仅仅是咨询信息。所以在本期项目中我们发布《AI+硬件》的开源项目，帮助使用者能够和AI硬件陪伴玩具进行对话、获取及时信息、获得陪伴。</p><p><br/></p><p>除了小X宝平台，在沟通中发现很多公益和开发者团队希望将已经有的Agent软件落地到硬件中，无论是Agent还是AI硬件不只是属于少数头部玩家团队，更应该是通过开源项目推出适用于不同平台的开源框架和教程，帮助小X宝、帮助更多公益和其他非公益开发者团队构建AI硬件项目。</p><p><br/></p><p>软件层包括扣子、Dify、FastGPT、腾讯混元等，这些都是标准化的Agent软件，希望嵌入到硬件中提供语音交互功能。功能上包括1V1心里咨询、互动聊天、通过Agent获取信息、通过语音方式记录美好时光等等。硬件上包括普通芯片和玩偶，在本开源项目中核心关注软硬件结合与适配。</p><p><br/></p><p>这是一次开源挑战，参与该项目你将从0到1获得一个完整项目开发的机会，将获得包括产品设计、软件编码、硬件开发以及项目管理的能力，并且由你参与完成的这个开源项目将会让更多团队快速构建自己的AI+硬件项目。</p>,"1. 对Agent封装，能够通过软件方式进行调用
+2. 通过硬件能够进行基础对话
+3. 和硬件进行对话的数据能够记录保存，对数据进行可视化展示
+"
+基于 Spring AI Alibaba 的本地可观测与调试平台（前端）,基础,Vue.js,<p>1. 项目背景</p><p>本项目属于 Spring AI Alibaba 社区本地开发调试平台的一部分，平台涵盖前端与后端开发，本项目主要完成前端部分。该平台用于快速跟踪定位Agent运行链路、可视化快速与 Agent 交互等，需要提供sdk埋点、graph埋点、可视化平台后端逻辑、沙箱运行环境与通信协议实现等。</p><p><br/>2. 学生职责&amp;目标：</p><p>在这个项目中，学生将和社区导师与开发者一起平台前端部分开发，重点完成可视化链路展示、agent交互界面开发、prompt管理、页面交互效果优化等。<br/><br/>3. 学生要求&amp;技术栈</p><ul><li>熟练掌握 vue、react 等相关前端技术栈</li><li>熟悉 AI Agent 开发相关概念</li></ul>,"1. 在这个项目中，学生将和社区导师与开发者一起平台前端部分开发，重点完成可视化链路展示、agent交互界面开发、prompt管理、页面交互效果优化等。
+"
+openGauss 向量数据库集成Llama Stack,基础,"Database,AI",<p>实现Llama Stack与openGauss的适配，构建基于该数据库的LLM应用全栈解决方案，输出各层对接代码及部署方案。</p>,"1. 开发openGauss向量存储对接层，支持索引构建与检索。
+2. 构建从数据接入到API服务的完整案例，输出包含监控方案的部署文档，代码合入社区。
+"
+运行时渲染解决方案,进阶,"UI,Vue.js","<p><span style=""color:#494949""><span style=""font-size:16px""><span style=""background-color:#ffffff"">当前TinyEngine仅支持出码方案，本赛题需要实现运行时渲染功能，能够支持开发态运行时预览与生产态部署运行。</span></span></span></p>","1. 实现运行时渲染模块，支持设计态、预览态与生产运行场景，并统一渲染能力(重构当前画布与预览渲染能力)。
+2. 实现现上预览、部署运行能力。
+3. 确保运行时渲染性能，避免性能瓶颈。(与出码方案性能相比不能有较大差距。建议指标：中等复杂度页面首屏≤2s, TTI≤3.5s)
+4. 提供详细的方案文档、使用文档，确保用户能够轻松使用该功能。
+5. 界面引导清晰，交互友好，无明显问题；代码逻辑清晰，模块划分合理，可维护性强，符合项目开发规范。
+"
+基于MindSpore Quantum实现薛定谔-海森堡变分算法,基础,AI,<p>任务背景：</p><p>目前对于XXZ等自旋模型的基态或者化学分子的基态求解这个问题，VQE是一种可以高精度的方法，但是VQE方法目前局限于对小规模系统的求解。当系统规模增加的时候，为了实现高精度求解，VQE线路的层数需要增加，且变分参数的训练也会非常耗费资源。因此，最近一种薛定谔-海森堡变分算法被提出，用来减少量子线路所需层数，这种方法将部分的训练开销转移到可以被经典高效模拟的Clifford线路，因此是一种更加高效的方法，探究这个方法的适用场景和局限性非常重要。</p><p>任务需求：</p><p>基于MindSpore Quantum框架实现薛定谔-海森堡变分算法最新版本复现薛定谔-海森堡变分算法，对于XXZ自旋模型，能够高效实现求解，相比于传统的VQE提升性能。</p>,"1. 使用MindSpore Quantum 0.10.0复现论文中的图2和图3；
+2. 提交规范的技术报告，需讨论a.针对给定的模型如何设计变分Clifford线路；b.阐述复现的薛定谔-海森堡变分算法；c.该方法的适用场景和局限性；
+3. 相关评估指标符合要求，代码需要有适当的注释并通过clean code标准；
+4. 最终项目代码需要通过审核并合入MindSpore Quantum代码仓。
+"
+基于算子学习的疾病负担外推与以糖网为例的气象环境——基因互作下的代谢病解析,进阶,"Deep Learning,Machine Learning",<p>1. 【项目1】全国/区域尺度的疾病负担预测模型：利用ERA6气象数据（高频率、高空间分辨率）与UK Biobank数据（低频率、精确样本位置）之间在经纬度和时间尺度上的积分或统计映射关系，探索算子学习或高保真模拟在疾病预测中的可行性以及输出全国尺度热力图预测。</p><p>2. 【项目2】UK Biobank样本级疾病研究子项目：将每位样本的时间与经纬度匹配气象背景，分析气象外因与基因内因对糖尿病视网膜病变发病非对称性的影响，包括气象-基因交互建模、个体糖网发病风险评估。</p>,"1.代码方面的验收标准：两个项目都请参考模型复现指南中的验收标准部分 https://paddlescience-docs.readthedocs.io/zh/latest/zh/reproduction/#3
+2.论文方面的验收标准：任选1个项目，撰写一篇达到发表水平（EI检索）的论文
+"
+基于MindSpore NLP实现Open-R1算法,进阶,AI,<p>随着deepseek的开源，当前开源社区有不少deepseek-r1的复现实现，但是缺少mindspore的对标实现，本任务需要基于MindNLP（MindSpore动态图）+昇腾实现和huggingface Open-R1能力完全对标的R1算法实现。</p><p></p>,"1. 使用MindNLP实现Open-R1
+2. 复现aha moment
+3. 提交项目报告（ACL论文格式
+4. 最终项目代码需要通过审核并合入MindSpore NLP仓。
+"
+基于MindSpore生成式套件，构建多智能的多Agent交互金融语音客服,进阶,AI,<p>基于MindSpore套件构建一个高效、安全的智能语音客服系统应用案例，以金融银行业务为例；语音交互层使用生成式套件的ASR + lm +TTS功能，用Dify搭建多智能体交互的多Agent协作引擎；包含的功能有语音导航与意图识别，金融产品推荐和风险提示，反欺诈，投诉与纠纷处理等；系统还需要具备隐私保护，审计溯源和防攻击能力。</p>,"1. 项目需应用MindSporeNLP和生成式套件的ASR + lm +TTS功能
+2. 搭建多个业务智能体，包括认证，查询，投资顾问，投诉等；完成多个智能体交互和意图识别功能
+3. 搭建后端服务层：大数据引擎用于用户画像；风控引擎用于规则和安全
+"
+Dromara孵化器网站优化建设和主网站优化,基础,Vue.js,<p>Dromara 是由顶尖开源项目维护者自发组织的开源社区。提供包括流行工具，安全认证，调度编排，前端和应用框架，AI等开源产品，累计获得 300K+ Star，服务成千上万团队。技术栈全面开源共建，保持社区中立。希望让每一位开源爱好者，体会到开源的快乐。</p><p></p><p>Dromara 开源社区目前拥有10+顶级项目和50+孵化器项目，我们的主服务和孵化器都有对应的官方网站。</p><p></p><p>此课题需要对两个官方网站 孵化器官网和主官网 进行UI风格统一设计，架构统一，页面完善优化，官网功能特性新增等，突出主官网和孵化器项目的展示，优化博客提交流程，编写官网使用文档等。</p>,"1. 优化完善孵化器网站UI页面和官网UI页面
+2. 设计和完善网站内容展示
+ - 2.1：顶级项目群和孵化器项目群的展示UI优化
+3. 统一孵化器网站和官网的技术架构，升级使用最新对应的技术版本，提供相应的构建文档和本地部署文档等
+4. 其它网站页面开发
+"
+基于MindSpore实现材料属性预测模型MatterSim的迁移开发,进阶,AI,<p>通过大规模的预训练，覆盖尽可能多的分子及晶体结构，得到高泛化性的力场及属性预测模型，成为一种趋势。</p><p>MatterSim在2024年由微软开发，对材料空间广泛覆盖，可以在多种体系和多种属性上进行精确预测。</p>,"1. 基于MindSpore+NPU，结合AI化学套件MindSpore Chemistry现有能力，实现材料属性预测模型MatterSim的迁移开发，并对齐论文精度和性能。
+"
+基于RISC-V架构的KubeVirt虚拟化支持与生态适配,进阶/Advanced,"RISC-V,Linux,Virtualization,AI,Cloud Native","<p style=""text-align:left;"" class=""MsoNormal"">        <strong><u><span style=""color:#292b33""><span style=""font-size:9ptpx""><span style=""background-color:#ffffff"">随着 RISC-V 架构在开源硬件领域的迅速发展，其在 AI 推理/训练和视频编解码等高性能计算场景中的应用潜力日益凸显。为了充分利用 RISC-V 的优势，构建支持分布式虚拟化直通的解决方案变得尤为重要。KubeVirt 作为 Kubernetes 的虚拟化扩展，为容器化环境中的虚拟机管理提供了强大的支持。然而，目前 KubeVirt 尚未原生支持 RISC-V 架构，这限制了其在新兴硬件平台上的应用。</span></span></span></u></strong></p><p style=""text-align:left;text-indent:2em;"" class=""MsoNormal""><strong><u><span style=""color:#292b33""><span style=""font-size:9ptpx""><span style=""background-color:#ffffff"">目前，已实现了在 RISC-V 上重构基本的容器镜像，并且构建工具链已适配 RISC-V 架构 。本项目旨在深入探索 RISC-V 的虚拟化特性，特别是结合 QEMU 和 KVM 的支持，完善 KubeVirt 在 RISC-V 上的适配工作。具体包括：实现对 RISC-V 虚拟化扩展的支持、提供分布式虚拟化直通的能力、确保与现有社区生态的兼容性等。</span></span></span></u></strong></p><p style=""text-align:left;text-indent:2em;"" class=""MsoNormal""><strong><u><span style=""color:#292b33""><span style=""font-size:9ptpx""><span style=""background-color:#ffffff"">通过本项目的实施，期望将 RISC-V 的支持合并到 KubeVirt 的上游社区，推动其在新兴硬件平台上的应用。这不仅有助于推动在云原生虚拟化领域的影响力，也为 AI 推理/训练和视频编解码等高性能计算场景提供坚实的基础。</span></span></span></u></strong></p>","
+1. 为 KubeVirt 提供 RISC-V 虚拟机创建和直通支持
+2. 为 Kubevirt RISC-V 支持开发虚拟化验证测试用例
+3. 为上游社区合并提供自动化验证能力
+4. 为适配方案编写技术文档与用户指南
+"
+为Zino框架实现AI服务抽象,进阶,"Web Application,RESTful API,AI",<p><code>Zino作为基于Rust语言的新一代组装式应用开发框架，目前对AI大模型服务的支持还不够完善。本项目旨在为Zino框架实现AI服务抽象，助力用户快速开发生成式AI应用，新添加的功能应该包括提示词模板、对话记忆、函数调用、RAG、智能体等。</code></p>,"1. 通过trait抽象集成国内外主流的大模型服务，并支持流式输出。
+ - 
+2. 实现对话记忆、函数调用、RAG检索、向量存储等功能的支持。
+3. 提供一定的AI工作流编排能力。
+"
+为 Overleaf LaTeX 协作平台接入 LLM Copilot 功能,进阶/Advanced,"AI,Web Application","<p><a href=""\&quot;https://github.com/overleaf/overleaf\&quot;"" target=""\&quot;_blank\&quot;"">Overleaf</a> 是一款开源在线 LaTeX 协作平台，通过将 LaTeX 环境打包在服务器中，让用户无需在本地配置环境即可在浏览器上撰写 LaTeX 文档，还可以邀请好友加入协作，是各高校及研究人员的科研利器。</p><p>目前，Overleaf 主要面向其商业版开发，开源版本功能落后，很多核心功能缺失。我们希望能够维护一个完全开源的分支，尽力将商业版功能及其他科研中需要的功能加入进来。</p><p>本项目希望为 Overleaf 接入 LLM API，为 LaTeX 公式、格式等提供辅助写作(Copilot)功能，减少用户学习 LaTeX 的难度。</p>","
+1. Overleaf LLM Copilot 功能
+ - 1.1. 撰写 LLM API 后端，支持主流 API 提供商并按照用户鉴权，以及用户配额支持。
+ - 1.2. 将后端整合至 Overleaf Monorepo 中，并编写相应的 Init 文件及 Docker 集成。
+ - 1.3. 开发 Copilot 用户前端及管理前端。
+ - 1.4. 撰写 LLM 接入相关文档。
+2. GitBridge Git备份服务
+ - 2.1. 通过 git+https 将项目文件备份至外部Git仓库
+ - 2.2. 相关前端及文档
+"
+基于Agent实现数据分析报告场景应用,基础,"AI,Database,LLM","<p>背景：</p><p><span style=""color:#000000""><span style=""font-size:mediumpx"">AI Agent已成为企业数据分析领域的重要提效智能化手段，随着大模型技术从&quot;生成式对话&quot;向&quot;任务自动化&quot;加速演进，以及MCP、Manus等技术的发展，数据分析领域的分析工具目前的主流趋势还是人+Copilot的方式，大模型主要还是作为辅助工具。因此，如何借助MCP、Agent等实现数据分析</span>Manus，<span style=""font-size:mediumpx"">优化分析范式是数据分析领域重要的研究课题。需要在DB-GPT中开发新的数据分析应用，为AI Agent在数据分析领域提供可复用的技术范式</span></span></p><p></p><p><span style=""color:#000000""><span style=""font-size:mediumpx"">预期目标： </span></span></p><p><span style=""color:#000000""><span style=""font-size:mediumpx"">1. 全流程自动化分析Agent使数据分析更高效：基于自然语言自动化编排Agent+MCP实现趋势分析、多维洞察等智能数据分析能力</span></span></p><p><span style=""color:#000000""><span style=""font-size:mediumpx"">2. 端到端分析模式使数据分析更深入：全流程追溯中间分析过程和结果，并结合分析结果生成分析图表/归因结果/决策建议等分析报告 </span></span></p><p><span style=""color:#000000""><span style=""font-size:mediumpx"">3. 基于大模型及RAG等技术知识增强：私有业务知识检索增强，提升数据分析口径准确性</span></span></p>","1. 项目设计文档（含架构图、原理图、实现细节等）
+2.  数据分析应用源代码（包含数据分析应用中的后端、前端代码等）
+3. 数据分析使用文档（提供完整的使用教程文档）
+4. 输出可复用的垂直场景模板（提供垂直场景最佳实践演示demo、测试数据集）
+"
+基于 Dubbo Triple 协议的零信任、高性能、可靠 Steaming 能力实现,进阶,"Web Application,Spring Cloud,JWT,OAuth,OpenIDConnect",<h2>背景</h2><p>Dubbo Triple 是 Apache Dubbo 推出的新一代基于 HTTP/2 的 RPC 协议，兼容 gRPC，支持 RESTful 风格、Streaming 通信、HTTP/3 等特性，适用于构建现代云原生微服务架构。本任务旨在围绕 Dubbo Triple 协议，构建一个完整的微服务通信框架，涵盖接口定义、认证授权、安全通信、性能优化及流式通信等关键功能。</p><h2><br/>目标</h2><h3><br/>1. 基于 OpenAPI 的接口定义与代码生成</h3><ul><li>完善 Dubbo 生成 OpenAPI 的使用文档、用例、教程</li><li>对接 OpenAPI Generator 生态，支持通过 OpenAPI Specification 生成 Dubbo Triple 协议的服务端和客户端代码模板</li></ul><h3><br/>2. 认证（Authn）机制集成</h3><ul><li>实现 ACME 协议的支持，集成 cert-manager 和 Let&#x27;s Encrypt，实现自动化证书管理 。</li><li>支持 xDS 协议，与服务网格（如 Istio）环境集成，实现动态配置和证书分发 。</li><li>实现 JWKS（JSON Web Key Set）机制，验证 JWT 签名，确保通信的安全性。</li></ul><h3><br/>3. 授权（Authz）机制实现</h3><p>支持常见的 OAuth 2.0 授权流程，如授权码模式、客户端凭证模式等，确保资源的安全访问 。</p><h3><br/>4. 性能优化：零拷贝数据处理</h3><p>实现请求和返回数据的零拷贝读写，减少内存复制，提高数据处理效率。</p><h3><br/>5. 可靠的 Streaming 通信模式设计与实现</h3><p>在 Triple Streaming 通信模型的基础上，设计支持网络抖动、进程重启等异常情况的编程 API 模型，确保用户可以低成本构建可靠的 Streaming 通信功能<br/></p>,"1. 提供完整的代码实现，满足项目描述中要求的能力
+2. 提供详细的文档，涵盖使用说明、API 文档等
+"
+量子启发算法超参数搜寻模块开发,基础,AI,<p>任务背景：</p><p>通过量子启发式算法求解组合优化问题时，优化结果会受到量子启发算法中的超参数选取的显著影响。对于合适超参数的搜寻，目前通常是基于经验调整或者进行暴力的参数搜索，这往往会耗费很多时间。本问题希望针对量子启发算法的特性，开发对应的自动化量子启发算法超参数寻优流程，以提升量子启发算法最优超参数的搜寻效率。</p><p>任务需求：</p><p>针对bSB、dSB、CAC和CFC这四种典型的量子启发算法，在四种典型的二值组合优化问题下（变量取值±1）开发对应的量子启发算法超参数优化策略。具体四类组合优化问题包括：</p><p>1、一般形式的二阶二值优化问题；</p><p>2、一般形式的高阶二值优化问题（最高8阶）；</p><p>3、特殊的高阶二值优化问题1——任意3阶二值问题表达式的平方；</p><p>4、特殊的高阶二值优化问题2——任意两个3阶二值问题表达式的平方求商，通过Dinkelback方法转化出的高阶二值优化问题</p><p></p>,"1. 针对需求描述中给出的4种典型的问题，基于提供的数据集（4种典型问题，每个问题50个数据集，合计200个），算法有60%的结果优于基线方法给出的结果。
+对于一般形式的二值优化问题，基线为MindSpore Quantum的QAIA库中的默任参数；对于其他问题，基线为QAIA算法+现有的调参模块hyperopt在相同时间内给出的优化结果（代码的运行时间包括参数搜索部分耗时）；
+2. 提交详细的技术报告，包括：（1）对代码采用的参数搜寻策略的详细分析，（2）bSB、dSB、CAC和CFC算法下代码针对200个数据集的优化结果和基线结果的比较分析；
+3. 相关评估指标符合要求，代码需要有适当的注释并通过clean code标准；
+4. 最终项目代码需要通过审核并合入 MindSpore Quantum代码仓。
+"
+飞桨PaddleNLP-前沿模型模块化设计,进阶,"Natural Language Processing (NLP),AI",<p>目前LLM模型结构迭代迅速，适用于多种领域的多样模型不断涌现，为社区带来蓬勃生机。但是，在模型构造上也存在多种多样的问题，初学者想要构造或者修改完整模型结构较为困难，同时性能优化手段需要多次重复在不用模型上实现和验证，较为费时费力。本选题目标为实现前沿模型模块化设计，并通过libcst等工具实现源码分析和转换的功能。最终目标期望基于Llama模型结构自动化实现Qwen2等模型的自动化构造。</p>,"1. PaddleNLP套件支持前沿模型模块化构造
+2. PaddleNLP套件Qwen2模型结构可通过模块化设计生成，并通过前后精度验证。
+3. PaddleNLP套件Qwen2模型并行能力可通过模块化设计生成，并通过前后精度验证。
+"
+GCC-Fortran 的 Function Multi-Versioning 功能实现,进阶,GCC,<p>Fortran 是一种特别适用于数值计算和科学计算的编程语言，这样的程序往往很容易被CPU的指令集扩展所加速，如 AVX2 、 AVX512 等等。然而，如果我们直接通过 &#x60;-march&#x60; 或 &#x60;-mcpu&#x60; 指定指令集扩展，会导致所编译的程序二进制失去跨平台兼容能力。此外，对于程序中的某些部分，编译时选择最佳的指令集扩展有时反而会引入显著的性能下降。因此，在函数粒度对函数多版本行为进行控制，不仅能够保证程序二进制的跨平台兼容性，同时还能够提升程序的性能。</p><p></p><p>在 GCC 中，我们可以在 C / C++ 通过 target 和 target_clones 两个 attribute 使编译器为函数生成支持不同指令集扩展集合的版本，并在运行时根据CPU所支持的指令集扩展选择其能够支持的最佳的函数。然而，GCC 中尚且缺乏对 Fortran 的函数多版本支持。</p><p></p>,"1. 基于 GCC master 分支，为 Fortran 语言的 subroutine 与 function 声明添加 target / target_clones 的 ATTRIBUTES 支持。
+2. 将该实现提交给开源上游
+"
+在Seata Console端提供MCP Server,进阶/Advanced,AI,<p>项目背景 </p><p>MCP（Model Context Protocol，模型上下文协议）是由Anthropic推出的一种开放标准，旨在统一大型语言模型（LLM）与外部数据源和工具之间的通信协议。Seata计划在Console端进行MCP Server建设，基于Console和Server现有的功能并新增相应模块实现MCP Server能力。供用户能够在相关的MCP Client端中进行与Seata的相关的事务管控、运维管理及数据报表功能 项目目标 最终目标是提供给用户易用的MCP生态，鼓励挖掘Seata其他MCP功能，最终完成以下需求：</p><p> 1. 提供seata console端的MCP Server，新增模块进行MCP相关功能建设 </p><p> 2. MCP Server（实现SSE协议）也需要能够接入类似Claude Desktop、curosr的客户端进行使用</p><p> 3. 根据以上功能，产出相关设计及功能使用文档</p>,"
+1. 提供seata server console端的MCP Server，新增模块进行MCP相关功能建设。
+ - 1.1. 对全局事务、分支事务、全局锁进行管控     ⅰ. 查询事务，全量查询和特定的单量查询 P0     ⅱ. 修改事务和全局锁，修改功能可依赖控制台已有的相关的功能 P2     ⅲ. 某个事务模式下的特定优化，如AT模式下的UNDO LOG解析给用户进行阅读 P1     ⅳ. 异常事务的检出 P0
+ - 1.2. 提供业务数据库访问及加工能力，用户能够在console端配置数据库配置，对数据库进行操作     ⅰ. 访问能力：支持AT模式的数据库MySQL、Oracle、PostgreSQL、 TiDB、MariaDB的访问（目前可只支持MySQL）P0     ⅱ. 加工能力：自然语言到数据报表生成，允许用户通过自然语言查询业务数据表。console端提供数据分析功能，业务数据查询功能，使用业务数据经过数据分析工具渲染得到特定的报表结果 P0
+ - 1.3.  server端日志或指标的排查，是否存在相关异常信息 P0
+ - 1.4.  权限管理，数据库及可访问事务的相关鉴权 P1
+ - 1.5. MCP Server基础功能，如可控制MCP Server开启关闭的热配置功能、SSE协议支持等 P0
+2. 根据以上功能，产出相关设计及功能使用文档，MCP Server也需要能够接入类似Claude Desktop或其他支持MCP协议的客户端进行使用 P1
+"
