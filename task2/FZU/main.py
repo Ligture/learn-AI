@@ -45,7 +45,7 @@ def get_download_count(wbnewsid,owner,type='wbnewsfile',randomid='nattach'):
     response = session.get(api_url)
     text = response.text
     if response.status_code == 200:
-        start = text.find('"wbshowtimes"') #不引入json库,直接搜索
+        start = text.find('"wbshowtimes"')
         end = text.find(',',start)
         count = text[start+14:end]
 
@@ -89,7 +89,7 @@ def save_csv(noti_datas:list[NotificationData],filename='notifications.csv'):
         writer.writerow(header)
         for noti in noti_datas:
             if noti.attachments:
-                for atta in noti.attachments: #多个附件,每行一个,统一美观
+                for atta in noti.attachments: #如果有多个附件,每行写一个,统一美观
                     row = [
                         noti.title,
                         noti.url,
@@ -129,4 +129,5 @@ def main(amount):
 
     save_csv(noti_datas)
 
-main(500)
+if __name__ == '__main__':
+    main(500)
